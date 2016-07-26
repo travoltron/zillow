@@ -1,5 +1,5 @@
 {
-    "name": "yajra/zillow",
+    "name": "travoltron/zillow",
     "type": "application",
     "description": "Laravel Wrapper for Zillow API",
     "keywords": ["laravel", "zillow", "php", "api"],
