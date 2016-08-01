@@ -246,6 +246,10 @@ class ZillowClient
         if ($this->isSuccessful()) {
             if ($this->response['response'] && isset($this->response['response']['results']) && count($this->response['response']['results'])) {
                 foreach ($this->response['response']['results'] as $result) {
+                    if(!isset($result['zpid'])) {
+                        $this->setStatus(400, 'This is not a valid address');
+                        return;
+                    }
                     $this->results[$result['zpid']] = $result;
                 }
             }
